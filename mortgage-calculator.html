@@ -1,203 +1,187 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <title>Mortgage Scenario Calculator</title>
+    <style>
+        .calculator-container {
+            max-width: 800px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .input-section {
+            margin-bottom: 15px;
+        }
+        .input-section label {
+            margin-right: 10px;
+        }
+        .input-section input {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        .notes {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Mortgage Scenario Calculator&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.calculator-container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 800px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #ccc;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f9f9f9;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>table {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-collapse: collapse;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>th, td {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: left;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid #ddd;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>th {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f2f2f2;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.input-section {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.input-section label {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-right: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.input-section input {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-right: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.notes {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #666;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="calculator-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Mortgage Scenario Calculator&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="input-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;Property Price Now: £&lt;input type="number" id="priceNow" value="289707"&gt;&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;Annual HPI Growth: &lt;input type="number" id="hpiGrowth" value="3" step="0.1"&gt;%&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;LTV: &lt;input type="number" id="ltv" value="95" step="1"&gt;%&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="calculate()"&gt;Calculate&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;table id="resultsTable"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;thead&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;th&gt;Scenario&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;th&gt;Property Price (£)&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;th&gt;Mortgage (£)&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;th&gt;Rate (%)&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;th&gt;Monthly Payment (£)&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;th&gt;Stamp Duty (£)&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;th&gt;Total 5yr Outlay (£)&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;th&gt;Difference (£)&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/thead&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;tbody&gt;&lt;/tbody&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/table&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="notes"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Notes:&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;Term: 30 years&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;Sources: Property price data (Land Registry), Rate data (Moneyfacts), HPI growth (Halifax)&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;Rates based on average 5-year fixed rates at different LTVs&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function calculate() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const priceNow = parseFloat(document.getElementById('priceNow').value);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const hpiGrowth = parseFloat(document.getElementById('hpiGrowth').value) / 100;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const ltv = parseFloat(document.getElementById('ltv').value) / 100;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Base data from document</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const rates = {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>95: 5.72,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>90: 5.47,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>60: 4.77</p>
-<p class="p1"><span class="Apple-converted-space">            </span>};</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const currentRate = rates[95]; // Default to 95% LTV rate</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const priceNextYear = priceNow * (1 + hpiGrowth);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const mortgageNow = priceNow * ltv;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const mortgageNextYear = priceNextYear * ltv;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Stamp duty calculation (simplified from data)</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const stampDutyNow = 1985.35;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const stampDutyNextYear = 4485.35;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Monthly payment calculation (simplified amortization)</p>
-<p class="p1"><span class="Apple-converted-space">            </span>function calcMonthlyPayment(principal, annualRate, years) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const monthlyRate = annualRate / 12 / 100;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const numPayments = years * 12;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return principal * (monthlyRate * Math.pow(1 + monthlyRate, numPayments)) /<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                       </span>(Math.pow(1 + monthlyRate, numPayments) - 1);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Scenarios</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const scenarios = [</p>
-<p class="p1"><span class="Apple-converted-space">                </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>name: "Buy Now",</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>price: priceNow,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>mortgage: mortgageNow,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>rate: currentRate,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>stampDuty: stampDutyNow</p>
-<p class="p1"><span class="Apple-converted-space">                </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>name: "Buy in a Year (25bp drop)",</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>price: priceNextYear,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>mortgage: mortgageNextYear,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>rate: currentRate - 0.25,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>stampDuty: stampDutyNextYear</p>
-<p class="p1"><span class="Apple-converted-space">                </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>name: "Buy in a Year (50bp drop)",</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>price: priceNextYear,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>mortgage: mortgageNextYear,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>rate: currentRate - 0.50,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>stampDuty: stampDutyNextYear</p>
-<p class="p1"><span class="Apple-converted-space">                </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>name: "Buy in a Year (75bp drop)",</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>price: priceNextYear,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>mortgage: mortgageNextYear,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>rate: currentRate - 0.75,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>stampDuty: stampDutyNextYear</p>
-<p class="p1"><span class="Apple-converted-space">                </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>name: "Buy in a Year (100bp drop)",</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>price: priceNextYear,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>mortgage: mortgageNextYear,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>rate: currentRate - 1.00,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>stampDuty: stampDutyNextYear</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>];</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Calculate results</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const results = scenarios.map(scenario =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const monthly = calcMonthlyPayment(scenario.mortgage, scenario.rate, 30);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const total5yr = scenario.name.includes("Buy Now") ?<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>(monthly * 60 + scenario.stampDuty) :<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>(monthly * 48 + calcMonthlyPayment(mortgageNow, currentRate, 30) * 12 + scenario.stampDuty);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return { ...scenario, monthly, total5yr };</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Calculate differences</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const baseline = results[0].total5yr;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>results.forEach(result =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>result.difference = baseline - result.total5yr;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Update table</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const tbody = document.querySelector('#resultsTable tbody');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>tbody.innerHTML = '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>results.forEach(result =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const row = document.createElement('tr');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>row.innerHTML = `</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;${result.name}&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;${result.price.toFixed(2)}&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;${result.mortgage.toFixed(2)}&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;${result.rate.toFixed(2)}&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;${result.monthly.toFixed(2)}&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;${result.stampDuty.toFixed(2)}&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;${result.total5yr.toFixed(2)}&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;${result.difference ? result.difference.toFixed(2) : '-'}&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>tbody.appendChild(row);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Initial calculation</p>
-<p class="p1"><span class="Apple-converted-space">        </span>calculate();</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <div class="calculator-container">
+        <h2>Mortgage Scenario Calculator</h2>
+        <div class="input-section">
+            <label>Property Price Now: £<input type="number" id="priceNow" value="289707"></label>
+            <label>Annual HPI Growth: <input type="number" id="hpiGrowth" value="3" step="0.1">%</label>
+            <label>LTV: <input type="number" id="ltv" value="95" step="1">%</label>
+            <button onclick="calculate()">Calculate</button>
+        </div>
+        
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Property Price (£)</th>
+                    <th>Mortgage (£)</th>
+                    <th>Rate (%)</th>
+                    <th>Monthly Payment (£)</th>
+                    <th>Stamp Duty (£)</th>
+                    <th>Total 5yr Outlay (£)</th>
+                    <th>Difference (£)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="notes">
+            <p>Notes:</p>
+            <ul>
+                <li>Term: 30 years</li>
+                <li>Sources: Property price data (Land Registry), Rate data (Moneyfacts), HPI growth (Halifax)</li>
+                <li>Rates based on average 5-year fixed rates at different LTVs</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+            const priceNow = parseFloat(document.getElementById('priceNow').value);
+            const hpiGrowth = parseFloat(document.getElementById('hpiGrowth').value) / 100;
+            const ltv = parseFloat(document.getElementById('ltv').value) / 100;
+
+            // Base data from document
+            const rates = {
+                95: 5.72,
+                90: 5.47,
+                60: 4.77
+            };
+            const currentRate = rates[95]; // Default to 95% LTV rate
+            const priceNextYear = priceNow * (1 + hpiGrowth);
+            const mortgageNow = priceNow * ltv;
+            const mortgageNextYear = priceNextYear * ltv;
+
+            // Stamp duty calculation (simplified from data)
+            const stampDutyNow = 1985.35;
+            const stampDutyNextYear = 4485.35;
+
+            // Monthly payment calculation (simplified amortization)
+            function calcMonthlyPayment(principal, annualRate, years) {
+                const monthlyRate = annualRate / 12 / 100;
+                const numPayments = years * 12;
+                return principal * (monthlyRate * Math.pow(1 + monthlyRate, numPayments)) / 
+                       (Math.pow(1 + monthlyRate, numPayments) - 1);
+            }
+
+            // Scenarios
+            const scenarios = [
+                {
+                    name: "Buy Now",
+                    price: priceNow,
+                    mortgage: mortgageNow,
+                    rate: currentRate,
+                    stampDuty: stampDutyNow
+                },
+                {
+                    name: "Buy in a Year (25bp drop)",
+                    price: priceNextYear,
+                    mortgage: mortgageNextYear,
+                    rate: currentRate - 0.25,
+                    stampDuty: stampDutyNextYear
+                },
+                {
+                    name: "Buy in a Year (50bp drop)",
+                    price: priceNextYear,
+                    mortgage: mortgageNextYear,
+                    rate: currentRate - 0.50,
+                    stampDuty: stampDutyNextYear
+                },
+                {
+                    name: "Buy in a Year (75bp drop)",
+                    price: priceNextYear,
+                    mortgage: mortgageNextYear,
+                    rate: currentRate - 0.75,
+                    stampDuty: stampDutyNextYear
+                },
+                {
+                    name: "Buy in a Year (100bp drop)",
+                    price: priceNextYear,
+                    mortgage: mortgageNextYear,
+                    rate: currentRate - 1.00,
+                    stampDuty: stampDutyNextYear
+                }
+            ];
+
+            // Calculate results
+            const results = scenarios.map(scenario => {
+                const monthly = calcMonthlyPayment(scenario.mortgage, scenario.rate, 30);
+                const total5yr = scenario.name.includes("Buy Now") ? 
+                    (monthly * 60 + scenario.stampDuty) : 
+                    (monthly * 48 + calcMonthlyPayment(mortgageNow, currentRate, 30) * 12 + scenario.stampDuty);
+                return { ...scenario, monthly, total5yr };
+            });
+
+            // Calculate differences
+            const baseline = results[0].total5yr;
+            results.forEach(result => {
+                result.difference = baseline - result.total5yr;
+            });
+
+            // Update table
+            const tbody = document.querySelector('#resultsTable tbody');
+            tbody.innerHTML = '';
+            results.forEach(result => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${result.name}</td>
+                    <td>${result.price.toFixed(2)}</td>
+                    <td>${result.mortgage.toFixed(2)}</td>
+                    <td>${result.rate.toFixed(2)}</td>
+                    <td>${result.monthly.toFixed(2)}</td>
+                    <td>${result.stampDuty.toFixed(2)}</td>
+                    <td>${result.total5yr.toFixed(2)}</td>
+                    <td>${result.difference ? result.difference.toFixed(2) : '-'}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Initial calculation
+        calculate();
+    </script>
 </body>
 </html>
